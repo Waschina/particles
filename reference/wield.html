@@ -37,7 +37,7 @@ enforced."><meta property="og:image" content="/logo.png"><!-- mathjax --><script
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -85,40 +85,53 @@ enforced.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">impose</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">constraint</span>, <span class="va">...</span>, <span class="va">name</span>, include <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="fu">reimpose</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">name</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="fu">unimpose</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">name</span><span class="op">)</span>
-
-<span class="fu">wield</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">force</span>, <span class="va">...</span>, <span class="va">name</span>, include <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="fu">rewield</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">name</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="fu">unwield</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">name</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">impose</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">constraint</span>, <span class="va">...</span>, <span class="va">name</span>, include <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">reimpose</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">name</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">unimpose</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">name</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">wield</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">force</span>, <span class="va">...</span>, <span class="va">name</span>, include <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rewield</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">name</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">unwield</span><span class="op">(</span><span class="va">simulation</span>, <span class="va">name</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>simulation</dt>
 <dd><p>A simulation object</p></dd>
+
+
 <dt>constraint</dt>
 <dd><p>A constraint object</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Parameters passed on to the training of the force or constraint</p></dd>
+
+
 <dt>name</dt>
 <dd><p>The name of the force. For use when accessing the force at a
 later stage. If no name is given the force is accessible by its index in the
 stack.</p></dd>
+
+
 <dt>include</dt>
 <dd><p>The particles to be affected by this force. Defaults to every
 particle in the simulation (<em>tidy eval</em>)</p></dd>
+
+
 <dt>force</dt>
 <dd><p>A force object</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A simulation with the force or constraint added</p>
+    
+
+<p>A simulation with the force or constraint added</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -130,17 +143,17 @@ and constraints based on name or index and retrains them.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu">tidygraph</span><span class="fu">::</span><span class="fu"><a href="https://tidygraph.data-imaginist.com/reference/create_graphs.html" class="external-link">create_notable</a></span><span class="op">(</span><span class="st">'folkman'</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">graph</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu">wield</span><span class="op">(</span><span class="va">link_force</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu">tidygraph</span><span class="fu">::</span><span class="fu"><a href="https://tidygraph.data-imaginist.com/reference/create_graphs.html" class="external-link">create_notable</a></span><span class="op">(</span><span class="st">'folkman'</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">graph</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="simulate.html">simulate</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu">wield</span><span class="op">(</span><span class="va">link_force</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A particle simulation:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> * 20 particles</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> * 1 Force</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   - link_force</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> * 0 Constraint</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> * 0 Evolutions</span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -155,7 +168,7 @@ and constraints based on name or index and retrains them.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer></div>

@@ -35,7 +35,7 @@ after modifying the state of the particles and their interactions."><meta proper
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -81,20 +81,26 @@ after modifying the state of the particles and their interactions.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">add_particles</span><span class="op">(</span><span class="va">.data</span>, <span class="va">...</span>, interactions <span class="op">=</span> <span class="cn">NULL</span>, setup <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span>
-
-<span class="fu">add_interaction</span><span class="op">(</span><span class="va">.data</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">add_particles</span><span class="op">(</span><span class="va">.data</span>, <span class="va">...</span>, interactions <span class="op">=</span> <span class="cn">NULL</span>, setup <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">add_interaction</span><span class="op">(</span><span class="va">.data</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>.data</dt>
 <dd><p>A simulation object</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Parameters passed on to the main verbs in tidygraph/dplyr</p></dd>
+
+
 <dt>interactions</dt>
 <dd><p>A data.frame of interactions/edges to add along with the
 particles</p></dd>
+
+
 <dt>setup</dt>
 <dd><p>A function to calculate the starting conditions for the
 particles. It receives all particles with the current position and
@@ -102,10 +108,13 @@ velocity encoded in the <code>x</code>, <code>y</code>, <code>x_vel</code>, and 
 will have NA. The function must return a position and velocity for all
 particles even though the values for the current particles will be discarded.
 If NULL it will use the genesis function used when creating the simulation.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A simulation object</p>
+    
+
+<p>A simulation object</p>
     </div>
     <div id="see-also">
     <h2>See also</h2>
@@ -126,7 +135,7 @@ If NULL it will use the genesis function used when creating the simulation.</p><
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer></div>
