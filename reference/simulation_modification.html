@@ -26,7 +26,7 @@ after modifying the state of the particles and their interactions."><meta proper
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">particles</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.3.9000</span>
       </span>
     </div>
 
@@ -83,6 +83,8 @@ after modifying the state of the particles and their interactions.</p>
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">add_particles</span><span class="op">(</span><span class="va">.data</span>, <span class="va">...</span>, interactions <span class="op">=</span> <span class="cn">NULL</span>, setup <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
 <span></span>
+<span><span class="fu">replace_particles</span><span class="op">(</span><span class="va">.data</span>, <span class="va">particles</span>, setup <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span></span>
 <span><span class="fu">add_interaction</span><span class="op">(</span><span class="va">.data</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -108,6 +110,10 @@ velocity encoded in the <code>x</code>, <code>y</code>, <code>x_vel</code>, and 
 will have NA. The function must return a position and velocity for all
 particles even though the values for the current particles will be discarded.
 If NULL it will use the genesis function used when creating the simulation.</p></dd>
+
+
+<dt>particles</dt>
+<dd><p>A <code>tbl_graph</code> or an object coercible to one</p></dd>
 
 </dl></div>
     <div id="value">
@@ -135,7 +141,7 @@ If NULL it will use the genesis function used when creating the simulation.</p><
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

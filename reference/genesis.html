@@ -20,7 +20,7 @@ which is also the default in d3-force."><meta property="og:image" content="/logo
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">particles</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.3.9000</span>
       </span>
     </div>
 
@@ -121,11 +121,11 @@ row for each particle giving the x and y position and velocity respectively.</p>
     <div id="functions">
     <h2>Functions</h2>
     
-<ul><li><p><code>phyllotactic_genesis</code>: Initiates particles in a phyllotactic arrangement with zero velocity</p></li>
-<li><p><code>predefined_genesis</code>: Uses information from the node data to set position and velocity.</p></li>
-<li><p><code>bigbang_genesis</code>: Initiates particles at center position and a random velocity</p></li>
-<li><p><code>aquarium_genesis</code>: Places particles randomly in a rectangle and gives them a random velocity</p></li>
-<li><p><code>petridish_genesis</code>: Places particles randomly on a disc and gives them a random velocity</p></li>
+<ul><li><p><code>phyllotactic_genesis()</code>: Initiates particles in a phyllotactic arrangement with zero velocity</p></li>
+<li><p><code>predefined_genesis()</code>: Uses information from the node data to set position and velocity.</p></li>
+<li><p><code>bigbang_genesis()</code>: Initiates particles at center position and a random velocity</p></li>
+<li><p><code>aquarium_genesis()</code>: Places particles randomly in a rectangle and gives them a random velocity</p></li>
+<li><p><code>petridish_genesis()</code>: Places particles randomly on a disc and gives them a random velocity</p></li>
 </ul></div>
 
     <div id="ref-examples">
@@ -152,7 +152,7 @@ row for each particle giving the x and y position and velocity respectively.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Usually used as an argument to simulate</span></span></span>
-<span class="r-in"><span><span class="va">graph</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span><span class="va">graph</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="simulate.html">simulate</a></span><span class="op">(</span>setup <span class="op">=</span> <span class="fu">phyllotactic_genesis</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A particle simulation:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> * 5 particles</span>
@@ -174,7 +174,7 @@ row for each particle giving the x and y position and velocity respectively.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>
